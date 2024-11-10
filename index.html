@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+<body>
+    <!-- Question 1 -->
+<h2>#1 Shown in console</h2>
+    <!-- let -->
+<script>
+    console.log("Let Variables")
+    let myLetVariable = 2;
+        console.log(myLetVariable);  
+
+        myLetVariable = 5;
+        console.log(myLetVariable); 
+ </script>
+        
+
+    <!-- var -->
+     <script>
+        console.log("Var Variables")
+        var myVarVariable = 2;
+            console.log(myVarVariable);  
+
+            myVarVariable = 5;
+            console.log(myVarVariable); 
+            console.log("The let and var declarations can be assigned a differnt value in the same scope")
+     </script>
+
+    <!-- const -->
+     <script>
+        console.log("Const Variable")
+        const myConstVariable = 2;
+        console.log(myConstVariable)
+        // myConstVariable = 5;
+        console.log(myConstVariable)
+        console.log("The const declaration cannot be assigned a different value in the same scope thus giving an error")
+     </script>
+
+    <!-- Question 2 -->
+     
+     <script>
+        console.log("JS Object Literal")
+        let student = {
+            firstName: "Jackson",
+            lastName: "Beem",
+            age: 21,
+        }
+        console.log(student);
+        console.log("Destructured JS Object")
+        console.log(student.firstName)
+        console.log(student.lastName)
+        console.log(student.age)
+     </script>
+     <div>
+        <h2>
+            #2 JSON Object literal and JS Object Literal Differencess
+        </h2>
+     <ul>
+        <p>Syntax:With JS Object literals, functions and expression can be expressed as values while JSON data types can be expressed as values.</p>
+        <p>Use Case:JS Object Literals are used to creat complex objects that have nested functions structures while JSON object literals are used to share data between systems like APIs.</p>
+        <p>Data Types:JS object literals support all of the data types in JS while JSON object literals can only be strings, numbers, booleans, objects, and arrays.</p>
+        <p></p>
+     </ul>
+     </div>
+    <!-- Question 3 -->
+
+    <script>
+        const quotes = [
+    "Be yourself; everyone else is already taken. — Oscar Wilde",
+    "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. — Albert Einstein",
+    "So many books, so little time. — Frank Zappa",
+    "A room without books is like a body without a soul. — Marcus Tullius Cicero",
+    "You only live once, but if you do it right, once is enough. — Mae West",
+    "Be the change that you wish to see in the world. — Mahatma Gandhi",
+    "In three words I can sum up everything I've learned about life: it goes on. — Robert Frost",
+    "If you tell the truth, you don't have to remember anything. — Mark Twain",
+    "Always forgive your enemies; nothing annoys them so much. — Oscar Wilde",
+    "To live is the rarest thing in the world. Most people exist, that is all. — Oscar Wilde"
+        ]
+    </script>
+   <h2>#3</h2>
+   <button id = "quote-button">Click for a Quote</button>
+   
+    <script>
+        document.getElementById(`quote-button`).addEventListener(`click`,function() {
+            let randomizer = Math.floor(Math.random()*quotes.length);
+            document.getElementById(`quote-display`).innerText = quotes[randomizer]
+        });
+        
+    </script>
+    <p id="quote-display"> </p>
+</body>
+</html>
